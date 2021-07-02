@@ -11,7 +11,7 @@ public class HomePage extends BaseClass {
 
     @FindBy(xpath = "//a[@aria-label='My profile']")
     WebElement myProfile;
-    @FindBy(xpath = "//div[contains(text(),'Udemy credits')]")
+    @FindBy(xpath = "//div[contains(text(),'Log out')]")
     WebElement logOut;
     @FindBy(xpath = "//div[contains(text(),\"You've successfully logged out of Udemy. Come back soon!\")]")
     WebElement alertMessage;

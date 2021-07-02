@@ -1,5 +1,5 @@
-com/datadrivenframework/pages/HomePage.java
- com.datadrivenframework.pages.HomePage
+com/datadrivenframework/utility/DataProvider.java
+ com.datadrivenframework.utility.DataProvider
 com/datadrivenframework/utility/TestListener.java
  com.datadrivenframework.utility.TestListener
 com/datadrivenframework/base/BaseClass.java
@@ -12,5 +12,5 @@ com/datadrivenframework/pages/Login.java
  com.datadrivenframework.pages.Login
 com/datadrivenframework/utility/ExcelUtil.java
  com.datadrivenframework.utility.ExcelUtil
-com/datadrivenframework/utility/DataProvider.java
- com.datadrivenframework.utility.DataProvider
+com/datadrivenframework/pages/HomePage.java
+ com.datadrivenframework.pages.HomePage

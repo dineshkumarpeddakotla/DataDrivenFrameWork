@@ -11,14 +11,14 @@
             </class>
         </classes>
     </test>
-    <test verbose="2" name="Test with firefox browser">
-        <parameter name="browserName" value="firefox"/>
-        <classes>
-            <class name="com.datadrivenframework.TestDataDriven">
-                <methods>
-                    <include name="loginTo_Application_WithValid_Credentials"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
+<!--    <test verbose="2" name="Test with firefox browser">-->
+<!--        <parameter name="browserName" value="firefox"/>-->
+<!--        <classes>-->
+<!--            <class name="com.datadrivenframework.TestDataDriven">-->
+<!--                <methods>-->
+<!--                    <include name="loginTo_Application_WithValid_Credentials"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
 </suite>
