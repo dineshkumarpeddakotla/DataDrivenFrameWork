@@ -1,3 +1,11 @@
+/*
+ *Purpose : Class is implemented to use the multiple browsers by giving browser name
+ *
+ * @author Dinesh Kumar Peddakotla
+ * @version 1.0
+ * @since 1-07-2021
+ */
+
 package com.datadrivenframework.utility;
 
 import com.datadrivenframework.base.BaseClass;
@@ -34,6 +42,7 @@ public class CrossBrowser extends BaseClass {
                 WebDriverManager.operadriver().setup();
                 driver = new OperaDriver();
                 break;
+            default: System.out.println("Please provide browser name");
         }
 
         return driver;

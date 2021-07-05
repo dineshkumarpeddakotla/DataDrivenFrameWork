@@ -1,3 +1,13 @@
+/*
+ *Purpose : Class is implemented for taking screenshots after every test execution
+ *          by implements ITestListener interface and uses ITestResults interface
+ *          to identify the results of test
+ *
+ * @author Dinesh Kumar Peddakotla
+ * @version 1.0
+ * @since 25-06-2021
+ */
+
 package com.datadrivenframework.utility;
 
 import org.testng.ITestListener;

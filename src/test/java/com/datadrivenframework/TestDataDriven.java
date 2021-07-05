@@ -1,3 +1,13 @@
+/*
+ *Purpose : Class is implemented for executing the different test cases for LoginPage
+ *               @Test annotation represents to identify and execute testcase
+ *               @Listeners annotation is used to make listen instructions before and after testcases
+ *
+ * @author Dinesh Kumar Peddakotla
+ * @version 1.0
+ * @since 23-06-2021
+ */
+
 package com.datadrivenframework;
 
 import com.datadrivenframework.base.BaseClass;
@@ -20,6 +30,12 @@ public class TestDataDriven extends BaseClass {
         String actualTitle = login.login(email,password);
         String expectedTitle = "Online Courses - Anytime, Anywhere | Udemy";
         Boolean alertMessage = homePage.applicationLogout();
+
+        login.loginLink.click();
+
+        if (login.loginToDifferentAccount.isDisplayed()) {
+            login.loginToDifferentAccount.click();
+        }
 
         Assert.assertEquals(actualTitle, expectedTitle);
         Assert.assertTrue(alertMessage);

@@ -1,3 +1,12 @@
+/*
+ *Purpose : Class is implemented with pom and page factory model to find the webElements
+ *          by using locators in Home Page and different methods are implemented to execute operations
+ *
+ * @author Dinesh Kumar Peddakotla
+ * @version 1.0
+ * @since 24-06-2021
+ */
+
 package com.datadrivenframework.pages;
 
 import com.datadrivenframework.base.BaseClass;
@@ -43,6 +52,6 @@ public class HomePage extends BaseClass {
         actions.moveToElement(myProfile).perform();
         Thread.sleep(1000);
         actions.moveToElement(element).perform();
-        Thread.sleep(1000);
+        Thread.sleep(1300);
     }
 }

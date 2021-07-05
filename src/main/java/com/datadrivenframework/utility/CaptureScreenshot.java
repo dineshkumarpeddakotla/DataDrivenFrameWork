@@ -1,3 +1,11 @@
+/*
+ *Purpose : Class is implemented for taking screenshots and place those screenshot in necessary directory
+ *
+ * @author Dinesh Kumar Peddakotla
+ * @version 1.0
+ * @since 24-06-2021
+ */
+
 package com.datadrivenframework.utility;
 
 import com.datadrivenframework.base.BaseClass;
@@ -23,7 +31,7 @@ public class CaptureScreenshot extends BaseClass {
 
         TakesScreenshot ts = (TakesScreenshot) driver;
         File srcFile = ts.getScreenshotAs(OutputType.FILE);
-        File destFile = new File(".\\screenshot\\"+result+"\\"+ screenshotName+"_"+date+".png");
+        File destFile = new File(".\\screenshots\\"+result+"\\"+ screenshotName+"_"+date+".png");
         FileUtils.copyFile(srcFile, destFile);
     }
 }
