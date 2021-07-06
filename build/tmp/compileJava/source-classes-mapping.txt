@@ -8,6 +8,8 @@ com/datadrivenframework/utility/CaptureScreenshot.java
  com.datadrivenframework.utility.CaptureScreenshot
 com/datadrivenframework/utility/CrossBrowser.java
  com.datadrivenframework.utility.CrossBrowser
+com/datadrivenframework/utility/FileNotFoundException.java
+ com.datadrivenframework.utility.FileNotFoundException
 com/datadrivenframework/pages/Login.java
  com.datadrivenframework.pages.Login
 com/datadrivenframework/utility/ExcelUtil.java

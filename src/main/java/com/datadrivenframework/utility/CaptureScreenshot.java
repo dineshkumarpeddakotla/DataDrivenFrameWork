@@ -24,14 +24,17 @@ public class CaptureScreenshot extends BaseClass {
      * captureScreenshot method is used to take screenshot
      * @param screenshotName testcase name is giving
      * @param result giving success or failed as input
-     * @throws IOException file not found exception will be thrown
      */
-    public void captureScreenshot(String screenshotName, String result) throws IOException {
+    public void captureScreenshot(String screenshotName, String result)  {
         String date = new SimpleDateFormat("yyyy_MM_dd_hhmmss").format(new Date());
 
         TakesScreenshot ts = (TakesScreenshot) driver;
         File srcFile = ts.getScreenshotAs(OutputType.FILE);
         File destFile = new File(".\\screenshots\\"+result+"\\"+ screenshotName+"_"+date+".png");
-        FileUtils.copyFile(srcFile, destFile);
+        try {
+            FileUtils.copyFile(srcFile, destFile);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
