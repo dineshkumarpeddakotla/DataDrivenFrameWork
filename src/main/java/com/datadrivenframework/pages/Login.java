@@ -19,7 +19,6 @@ import java.util.concurrent.TimeUnit;
 
 public class Login extends BaseClass {
 
-
     //web elements are declared and FindBy annotation is used to find web elements by using locators
     @FindBy(linkText = "Log in")
     public WebElement loginLink;
@@ -40,16 +39,15 @@ public class Login extends BaseClass {
     /**
      * login method is used to login into application
      * @return page title
-     * @throws InterruptedException interrupts the execution for certain period
      */
-    public String login(String emailId, String pass) throws InterruptedException {
+    public String login(String emailId, String pass) {
         loginLink.click();
 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         email.sendKeys(emailId);
         password.sendKeys(pass);
         login.click();
-        Thread.sleep(2000);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         return driver.getTitle();
     }

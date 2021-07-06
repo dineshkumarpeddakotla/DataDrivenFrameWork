@@ -24,7 +24,7 @@ public class TestDataDriven extends BaseClass {
 
     //Test case is executed and assertion is done for login
     @Test(dataProvider = "LoginDetails", dataProviderClass = DataProvider.class)
-    public void loginTo_Application_WithValid_Credentials(String email, String password) throws InterruptedException {
+    public void loginTo_Application_WithValid_Credentials(String email, String password) {
         Login login = new Login(driver);
         HomePage homePage = new HomePage(driver);
         String actualTitle = login.login(email,password);

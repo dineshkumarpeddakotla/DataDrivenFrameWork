@@ -16,6 +16,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.concurrent.TimeUnit;
+
 public class HomePage extends BaseClass {
 
     @FindBy(xpath = "//a[@aria-label='My profile']")
@@ -33,10 +35,10 @@ public class HomePage extends BaseClass {
     /**
      * applicationLogout method is used to logout the user from application and uses action method in it
      * @return boolean value for alert message displayed or not
-     * @throws InterruptedException interrupts execution for certain given period of time
      */
-    public Boolean applicationLogout() throws InterruptedException {
+    public Boolean applicationLogout() {
         actions(logOut);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         logOut.click();
 
         return alertMessage.isDisplayed();
@@ -45,13 +47,11 @@ public class HomePage extends BaseClass {
     /**
      * actions method is used to perform certain action by using action class
      * @param element web element is used
-     * @throws InterruptedException interrupts execution for certain given period of time
      */
-    public void actions(WebElement element) throws InterruptedException {
+    public void actions(WebElement element) {
         Actions actions = new Actions(driver);
         actions.moveToElement(myProfile).perform();
-        Thread.sleep(1000);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         actions.moveToElement(element).perform();
-        Thread.sleep(1300);
     }
 }
