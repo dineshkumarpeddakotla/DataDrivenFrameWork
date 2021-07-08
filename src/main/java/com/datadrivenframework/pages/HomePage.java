@@ -10,6 +10,7 @@
 package com.datadrivenframework.pages;
 
 import com.datadrivenframework.base.BaseClass;
+import com.datadrivenframework.utility.Log;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -39,6 +40,7 @@ public class HomePage extends BaseClass {
     public Boolean applicationLogout() {
         actions(logOut);
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        Log.info("Click on Logout");
         logOut.click();
 
         return alertMessage.isDisplayed();

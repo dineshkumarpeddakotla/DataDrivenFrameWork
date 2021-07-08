@@ -1,0 +1,89 @@
+[INFO ] 2021-07-07 10:17:21.489 [main] Log - Test is starting
+[INFO ] 2021-07-07 10:17:21.505 [main] Log - browser is selecting
+[INFO ] 2021-07-07 10:17:26.388 [main] Log - Navigating to Url : https://www.udemy.com/
+[INFO ] 2021-07-07 10:17:33.994 [main] Log - loginTo_Application_WithValid_Credentials test is starting.
+[INFO ] 2021-07-07 10:17:34.120 [main] Log - Click on Login Button in Home Page
+[INFO ] 2021-07-07 10:17:40.335 [main] Log - Sending Email data
+[INFO ] 2021-07-07 10:17:40.569 [main] Log - Sending Password
+[INFO ] 2021-07-07 10:17:40.788 [main] Log - Click on Login to submit details 
+[INFO ] 2021-07-07 10:17:51.399 [main] Log - Click on Logout
+[INFO ] 2021-07-07 10:18:00.740 [main] Log - loginTo_Application_WithValid_Credentials Test is passed
+[INFO ] 2021-07-07 10:18:01.796 [main] Log - loginTo_Application_WithValid_Credentials test is starting.
+[INFO ] 2021-07-07 10:18:01.796 [main] Log - Click on Login Button in Home Page
+[INFO ] 2021-07-07 10:18:03.691 [main] Log - Sending Email data
+[INFO ] 2021-07-07 10:18:03.916 [main] Log - Sending Password
+[INFO ] 2021-07-07 10:18:04.049 [main] Log - Click on Login to submit details 
+[ERROR] 2021-07-07 10:18:19.668 [main] Log - loginTo_Application_WithValid_Credentials Test is failed
+[INFO ] 2021-07-07 10:18:19.883 [main] Log - loginTo_Application_WithValid_Credentials test is starting.
+[INFO ] 2021-07-07 10:18:19.894 [main] Log - Click on Login Button in Home Page
+[INFO ] 2021-07-07 10:18:21.856 [main] Log - Sending Email data
+[INFO ] 2021-07-07 10:18:22.102 [main] Log - Sending Password
+[INFO ] 2021-07-07 10:18:22.214 [main] Log - Click on Login to submit details 
+[ERROR] 2021-07-07 10:18:34.182 [main] Log - loginTo_Application_WithValid_Credentials Test is failed
+[INFO ] 2021-07-07 10:18:34.354 [main] Log - loginTo_Application_WithValid_Credentials test is starting.
+[INFO ] 2021-07-07 10:18:34.354 [main] Log - Click on Login Button in Home Page
+[INFO ] 2021-07-07 10:18:37.088 [main] Log - Sending Email data
+[INFO ] 2021-07-07 10:18:37.291 [main] Log - Sending Password
+[INFO ] 2021-07-07 10:18:37.431 [main] Log - Click on Login to submit details 
+[ERROR] 2021-07-07 10:18:49.199 [main] Log - loginTo_Application_WithValid_Credentials Test is failed
+[INFO ] 2021-07-07 10:18:49.404 [main] Log - Tests are ending 
+[INFO ] 2021-07-07 10:18:49.404 [main] Log - Closing the browser
+[INFO ] 2021-07-07 10:18:50.888 [main] Log - I am in onFinish method Test with chrome browser
+[INFO ] 2021-07-07 10:27:29.905 [main] Log - Test is starting
+[INFO ] 2021-07-07 10:27:29.921 [main] Log - browser is selecting
+[INFO ] 2021-07-07 10:27:37.464 [main] Log - Navigating to Url : https://www.udemy.com/
+[INFO ] 2021-07-07 10:27:50.566 [main] Log - loginTo_Application_WithValid_Credentials test is starting.
+[INFO ] 2021-07-07 10:27:51.024 [main] Log - Click on Login Button in Home Page
+[INFO ] 2021-07-07 10:27:55.460 [main] Log - Sending Email data
+[INFO ] 2021-07-07 10:27:55.736 [main] Log - Sending Password
+[INFO ] 2021-07-07 10:27:55.874 [main] Log - Click on Login to submit details 
+[INFO ] 2021-07-07 10:28:08.797 [main] Log - Click on Logout
+[INFO ] 2021-07-07 10:28:19.395 [main] Log - loginTo_Application_WithValid_Credentials Test is passed
+[INFO ] 2021-07-07 10:28:20.255 [main] Log - loginTo_Application_WithValid_Credentials test is starting.
+[INFO ] 2021-07-07 10:28:20.255 [main] Log - Click on Login Button in Home Page
+[ERROR] 2021-07-07 10:28:25.321 [main] Log - loginTo_Application_WithValid_Credentials Test is failed
+[INFO ] 2021-07-07 10:28:25.658 [main] Log - loginTo_Application_WithValid_Credentials test is starting.
+[INFO ] 2021-07-07 10:28:25.674 [main] Log - Click on Login Button in Home Page
+[INFO ] 2021-07-07 10:28:31.643 [main] Log - Sending Email data
+[INFO ] 2021-07-07 10:28:31.868 [main] Log - Sending Password
+[INFO ] 2021-07-07 10:28:31.985 [main] Log - Click on Login to submit details 
+[ERROR] 2021-07-07 10:28:44.701 [main] Log - loginTo_Application_WithValid_Credentials Test is failed
+[INFO ] 2021-07-07 10:28:45.045 [main] Log - loginTo_Application_WithValid_Credentials test is starting.
+[INFO ] 2021-07-07 10:28:45.045 [main] Log - Click on Login Button in Home Page
+[INFO ] 2021-07-07 10:28:48.810 [main] Log - Sending Email data
+[INFO ] 2021-07-07 10:28:49.059 [main] Log - Sending Password
+[INFO ] 2021-07-07 10:28:49.200 [main] Log - Click on Login to submit details 
+[ERROR] 2021-07-07 10:29:01.196 [main] Log - loginTo_Application_WithValid_Credentials Test is failed
+[INFO ] 2021-07-07 10:29:01.601 [main] Log - Tests are ending 
+[INFO ] 2021-07-07 10:29:01.601 [main] Log - Closing the browser
+[INFO ] 2021-07-07 10:29:03.909 [main] Log - I am in onFinish method Test with chrome browser
+[INFO ] 2021-07-07 10:38:20.841 [main] Log - Test is starting
+[INFO ] 2021-07-07 10:38:20.857 [main] Log - browser is selecting
+[INFO ] 2021-07-07 10:38:23.969 [main] Log - Navigating to Url : https://www.udemy.com/
+[INFO ] 2021-07-07 10:38:30.260 [main] Log - loginTo_Application_WithValid_Credentials test is starting.
+[INFO ] 2021-07-07 10:38:30.310 [main] Log - Click on Login Button in Home Page
+[INFO ] 2021-07-07 10:38:39.341 [main] Log - Sending Email data
+[INFO ] 2021-07-07 10:38:44.496 [main] Log - Sending Password
+[INFO ] 2021-07-07 10:38:44.947 [main] Log - Click on Login to submit details 
+[ERROR] 2021-07-07 10:38:56.711 [main] Log - loginTo_Application_WithValid_Credentials Test is failed
+[INFO ] 2021-07-07 10:38:57.219 [main] Log - loginTo_Application_WithValid_Credentials test is starting.
+[INFO ] 2021-07-07 10:38:57.224 [main] Log - Click on Login Button in Home Page
+[INFO ] 2021-07-07 10:39:00.378 [main] Log - Sending Email data
+[INFO ] 2021-07-07 10:39:00.581 [main] Log - Sending Password
+[INFO ] 2021-07-07 10:39:00.706 [main] Log - Click on Login to submit details 
+[ERROR] 2021-07-07 10:39:12.063 [main] Log - loginTo_Application_WithValid_Credentials Test is failed
+[INFO ] 2021-07-07 10:39:12.250 [main] Log - loginTo_Application_WithValid_Credentials test is starting.
+[INFO ] 2021-07-07 10:39:12.250 [main] Log - Click on Login Button in Home Page
+[INFO ] 2021-07-07 10:39:14.187 [main] Log - Sending Email data
+[INFO ] 2021-07-07 10:39:14.422 [main] Log - Sending Password
+[INFO ] 2021-07-07 10:39:14.594 [main] Log - Click on Login to submit details 
+[ERROR] 2021-07-07 10:39:26.646 [main] Log - loginTo_Application_WithValid_Credentials Test is failed
+[INFO ] 2021-07-07 10:39:26.851 [main] Log - loginTo_Application_WithValid_Credentials test is starting.
+[INFO ] 2021-07-07 10:39:26.851 [main] Log - Click on Login Button in Home Page
+[INFO ] 2021-07-07 10:39:28.961 [main] Log - Sending Email data
+[INFO ] 2021-07-07 10:39:29.264 [main] Log - Sending Password
+[INFO ] 2021-07-07 10:39:29.413 [main] Log - Click on Login to submit details 
+[ERROR] 2021-07-07 10:39:41.442 [main] Log - loginTo_Application_WithValid_Credentials Test is failed
+[INFO ] 2021-07-07 10:39:41.673 [main] Log - Tests are ending 
+[INFO ] 2021-07-07 10:39:41.673 [main] Log - Closing the browser
+[INFO ] 2021-07-07 10:39:43.110 [main] Log - I am in onFinish method Test with chrome browser

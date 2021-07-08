@@ -12,6 +12,7 @@
 package com.datadrivenframework.base;
 
 import com.datadrivenframework.utility.CrossBrowser;
+import com.datadrivenframework.utility.Log;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -31,7 +32,10 @@ public class BaseClass {
     @Parameters("browserName")
     @BeforeTest //execute before test
     public void setUp(String browserName) {
+        Log.info("Test is starting");
+        Log.info("browser is selecting");
         driver = CrossBrowser.selectDriver(browserName);
+        Log.info("Navigating to Url : https://www.udemy.com/");
         driver.get("https://www.udemy.com/");
         driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
         driver.manage().window().maximize();
@@ -41,6 +45,7 @@ public class BaseClass {
     //tearDown method closes all connections
     @AfterTest //execute after test
     public void tearDown() {
+        Log.info("Closing the browser");
         driver.quit();
     }
 }

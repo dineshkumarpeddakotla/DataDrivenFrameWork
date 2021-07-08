@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite" parallel="tests" thread-count="2">
+<suite name="All Test Suite" >
+    <listeners>
+        <listener class-name="com.datadrivenframework.utility.listeners.ExtentReporterNG"/>
+    </listeners>
     <test verbose="2" name="Test with chrome browser">
         <parameter name="browserName" value="chrome"/>
         <classes>
@@ -11,14 +14,14 @@
             </class>
         </classes>
     </test>
-    <test verbose="2" name="Test with firefox browser">
-        <parameter name="browserName" value="firefox"/>
-        <classes>
-            <class name="com.datadrivenframework.TestDataDriven">
-                <methods>
-                    <include name="loginTo_Application_WithValid_Credentials"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
+<!--    <test verbose="2" name="Test with firefox browser">-->
+<!--        <parameter name="browserName" value="firefox"/>-->
+<!--        <classes>-->
+<!--            <class name="com.datadrivenframework.TestDataDriven">-->
+<!--                <methods>-->
+<!--                    <include name="loginTo_Application_WithValid_Credentials"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
 </suite>

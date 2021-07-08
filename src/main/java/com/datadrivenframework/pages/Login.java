@@ -10,6 +10,7 @@
 package com.datadrivenframework.pages;
 
 import com.datadrivenframework.base.BaseClass;
+import com.datadrivenframework.utility.Log;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -41,11 +42,14 @@ public class Login extends BaseClass {
      * @return page title
      */
     public String login(String emailId, String pass) {
+        Log.info("Click on Login Button in Home Page");
         loginLink.click();
-
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        Log.info("Sending Email data");
         email.sendKeys(emailId);
+        Log.info("Sending Password");
         password.sendKeys(pass);
+        Log.info("Click on Login to submit details ");
         login.click();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
