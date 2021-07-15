@@ -22,7 +22,7 @@ import java.util.concurrent.TimeUnit;
 public class HomePage extends BaseClass {
 
     @FindBy(xpath = "//a[@aria-label='My profile']")
-    WebElement myProfile;
+    public WebElement myProfile;
     @FindBy(xpath = "//div[contains(text(),'Log out')]")
     WebElement logOut;
     @FindBy(xpath = "//div[contains(text(),\"You've successfully logged out of Udemy. Come back soon!\")]")
@@ -35,6 +35,7 @@ public class HomePage extends BaseClass {
 
     /**
      * applicationLogout method is used to logout the user from application and uses action method in it
+     *
      * @return boolean value for alert message displayed or not
      */
     public Boolean applicationLogout() {
@@ -48,6 +49,7 @@ public class HomePage extends BaseClass {
 
     /**
      * actions method is used to perform certain action by using action class
+     *
      * @param element web element is used
      */
     public void actions(WebElement element) {

@@ -10,20 +10,20 @@
 
 package com.datadrivenframework.utility.listeners;
 
+import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.Status;
 import com.datadrivenframework.base.BaseClass;
 import com.datadrivenframework.utility.CaptureScreenshot;
 import com.datadrivenframework.utility.ExcelUtil;
 import com.datadrivenframework.utility.Log;
-import io.qameta.allure.Allure;
-import io.qameta.allure.Attachment;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
+import com.datadrivenframework.utility.extent_report.ExtentManager;
+import com.datadrivenframework.utility.extent_report.ExtentTestManager;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.util.Arrays;
 
 public class TestListener extends BaseClass implements ITestListener {
 
@@ -31,12 +31,22 @@ public class TestListener extends BaseClass implements ITestListener {
     //excelUtil object is created
     ExcelUtil excelUtil = new ExcelUtil(".\\src\\test\\resources\\Udemy.xlsx", "LoginCredentials");
 
+
+    public void onStart(ITestContext context) {
+        System.out.println("*** Test Suite " + context.getName() + " started ***");
+    }
+
     public void onTestStart(ITestResult result) {
         Log.info(result.getName() + " test is starting.");
+        ExtentTestManager.startTest(result.getMethod().getMethodName());
+
     }
 
     public void onFinish(ITestContext testContext) {
         Log.info("I am in onFinish method " + testContext.getName());
+        ExtentTestManager.endTest();
+        ExtentManager.getInstance().flush();
+
     }
 
     /**
@@ -46,9 +56,17 @@ public class TestListener extends BaseClass implements ITestListener {
     public void onTestFailure(ITestResult result) {
         System.out.println("Method failed " + result.getName());
         Log.error(result.getName() + " Test is failed");
-        captureScreenshot.captureScreenshot(result.getName(), "failed");
-        excelUtil.writeData(result.getParameters(),result.getName(),"Fail");
-        Allure.addAttachment(result.getName(), new ByteArrayInputStream(((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES)));
+        System.out.println(Arrays.toString(result.getParameters()));
+        String screenshotPath = captureScreenshot.captureScreenshot(result.getName(), "failed");
+        try {
+            ExtentTestManager.getTest().addScreenCaptureFromPath(screenshotPath);
+            MediaEntityBuilder screenshot = MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath);
+            ExtentTestManager.getTest().log(Status.FAIL, "Test Failed",screenshot.build());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        excelUtil.writeData(result.getParameters(), result.getName(), "Fail");
+
     }
 
     /**
@@ -58,9 +76,17 @@ public class TestListener extends BaseClass implements ITestListener {
     public void onTestSuccess(ITestResult result) {
         System.out.println("Method passed " + result.getName());
         Log.info(result.getName()+ " Test is passed");
-        captureScreenshot.captureScreenshot(result.getName(), "success");
-        excelUtil.writeData(result.getParameters(),result.getName(),"Pass");
-        Allure.addAttachment(result.getName(), new ByteArrayInputStream(((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES)));
+        System.out.println(Arrays.toString(result.getParameters()));
+        excelUtil.writeData(result.getParameters(), result.getName(), "Pass");
+        String screenshotPath = captureScreenshot.captureScreenshot(result.getName(), "success");
+        try {
+            MediaEntityBuilder screenshot = MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath);
+            ExtentTestManager.getTest().log(Status.PASS, "Test passed",screenshot.build());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
     }
 
     /**
@@ -70,9 +96,16 @@ public class TestListener extends BaseClass implements ITestListener {
     public void onTestSkipped(ITestResult result) {
         System.out.println("Method skipped " + result.getName());
         Log.warn(result.getName()+" Test is skipped");
-        captureScreenshot.captureScreenshot(result.getName(), "skipped");
-        excelUtil.writeData(result.getParameters(),result.getName(),"Skipped");
-        Allure.addAttachment(result.getName(), new ByteArrayInputStream(((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES)));
+        System.out.println(Arrays.toString(result.getParameters()));
+
+        excelUtil.writeData(result.getParameters(), result.getName(), "Skip");
+        String screenshotPath = captureScreenshot.captureScreenshot(result.getName(), "skipped");
+        try {
+            MediaEntityBuilder screenshot = MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath);
+            ExtentTestManager.getTest().log(Status.SKIP, "Test Skipped",screenshot.build());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

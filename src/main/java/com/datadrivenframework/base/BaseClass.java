@@ -13,9 +13,11 @@ package com.datadrivenframework.base;
 
 import com.datadrivenframework.utility.CrossBrowser;
 import com.datadrivenframework.utility.Log;
+import io.qameta.allure.Description;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 import java.util.concurrent.TimeUnit;
@@ -31,7 +33,8 @@ public class BaseClass {
      */
     @Parameters("browserName")
     @BeforeTest //execute before test
-    public void setUp(String browserName) {
+    @Description("setup the browser")
+    public void setUp(@Optional("chrome") String browserName) {
         Log.info("Test is starting");
         Log.info("browser is selecting");
         driver = CrossBrowser.selectDriver(browserName);
@@ -44,6 +47,7 @@ public class BaseClass {
 
     //tearDown method closes all connections
     @AfterTest //execute after test
+    @Description("tear down the browser")
     public void tearDown() {
         Log.info("Closing the browser");
         driver.quit();

@@ -1,0 +1,3 @@
+:Method skipped loginTo_Application_WithValid_Credentials
+9Method failed loginTo_Application_WithValid_Credentials
+n[ERROR] 2021-07-08 18:31:14.566 [Test worker] Log - loginTo_Application_WithValid_Credentials Test is failed
